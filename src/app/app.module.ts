@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 import { ImageSearchComponent } from './image-search/image-search.component';
 import { ImageCardComponent } from './image-search/image-card/image-card.component';
 
@@ -16,7 +17,8 @@ import { ImageCardComponent } from './image-search/image-card/image-card.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

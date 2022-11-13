@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UnsplashService } from './unsplash.service';
 
 @Component({
   selector: 'app-image-search',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private unsplash: UnsplashService) { }
 
   ngOnInit(): void {
+    this.unsplash.listPhotographs();
   }
 
 }
