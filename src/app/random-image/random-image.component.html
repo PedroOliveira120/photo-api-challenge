@@ -1,0 +1,10 @@
+<div>
+  <div class="nav">
+    <a routerLink="/image-search">Home</a>
+  </div>
+  <div class="container">
+    <div class="image-wrapper">
+      <img src="{{data.urls.regular}}" alt="{{data.alt_description}}" (click)="getPhotograph()">
+    </div>
+  </div>
+</div>

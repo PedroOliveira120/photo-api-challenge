@@ -1,0 +1,24 @@
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+  .input-group {
+    width: auto;
+    input {
+      margin-right: 10px;
+    }
+  }
+}
+
+.grid-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .grid-item {
+    margin: 10px;
+    border-radius: 10%;
+  }
+}

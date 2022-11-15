@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="container homehyper">
+    <a routerLink="/image-search">Home</a>
+  </div>
+  <div class="image-wrapper">
+    <img src="{{imageData.urls.regular}}" alt="{{imageData.alt_description}}">
+  </div>
+  <div class="img-information">
+    <div class="container">
+      <div class="left side">
+        <ul style="list-style-type:disc;" title="User">
+          <div class="ul-item">
+            <p>User's name</p>
+            <li>{{imageData.user.name}}</li>
+          </div>
+          <div class="ul-item">
+            <p>User's portfolio</p>
+            <li><a href="{{imageData.user.links.portfolio}}">{{imageData.user.links.portfolio}}</a></li>
+          </div>
+          <div class="ul-item">
+            <p>User's Location</p>
+            <li>{{imageData.user.location}}</li>
+          </div>
+        </ul>
+      </div>
+      <div class="right side">
+        <ul style="list-style-type:disc;" title="Camera">
+          <div class="ul-item">
+            <p>Maker</p>
+            <li>{{imageData.exif.make}}</li>
+          </div>
+          <div class="ul-item">
+            <p>Model</p>
+            <li>{{imageData.exif.model}}</li>
+          </div>
+          <div class="ul-item">
+            <p>Name</p>
+            <li>{{imageData.exif.name}}</li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,14 +3,14 @@
   (mouseenter)="mouseOver=true" (mouseleave)="mouseOver=false">
   <div class="my-container">
     <div class="img-wrapper">
-      <img src={{imageData.urls.small}} alt={{imageData.alt_description}}>
+      <img src={{collectionData.cover_photo.urls.small}} alt={{collectionData.cover_photo.alt_description}}>
     </div>
     <div class="image-info" *ngIf="mouseOver">
       <div class="likes">
-        <p id="like-icon">♥</p>
-        <p>{{imageData.likes}}</p>
+        <p>{{collectionData.total_photos}}</p>
       </div>
-      <p>{{imageData.user.name}}</p>
+      <p>{{collectionData.user.username}}</p>
     </div>
   </div>
 </div>
+

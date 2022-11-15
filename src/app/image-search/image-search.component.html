@@ -1,7 +1,33 @@
-<div class="container text-center border">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-    <div class="col" *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]">
-      <app-image-card></app-image-card>
-    </div>
+<div class="container">
+  <header class="d-flex flex-wrap align-items-center justify-content-center py-3 mb-4 border-bottom">
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a routerLink="/" class="nav-link px-2 link-secondary">Home</a></li>
+      <li><a routerLink="/random-image" class="nav-link px-2 link-dark">Random</a></li>
+    </ul>
+  </header>
+</div>
+
+<div class="input-container">
+  <div class="input-group flex-nowrap">
+    <input type="text" class="form-control" placeholder="Search" aria-label="Search-field" aria-describedby="addon-wrapping" [(ngModel)]="search" (keyup)="onSearch()">
+  </div>
+  <select [(ngModel)]="topic" (change)="onSearch()">
+    <option value="photos">Photographs</option>
+    <option value="collections">Collections</option>
+  </select>
+</div>
+
+<div class="grid-container" *ngIf="topic==='photos'; else elseBlock">
+  <div class="grid-item" *ngFor="let item of photos">
+    <app-image-card [imageData]=item (click)="onClick(item)"></app-image-card>
   </div>
 </div>
+
+<ng-template #elseBlock>
+  <div class="grid-container">
+    <div class="grid-item" *ngFor="let item of collection">
+      <app-collection-card [collectionData]=item></app-collection-card>
+    </div>
+  </div>
+</ng-template>
+
