@@ -9,7 +9,7 @@ Wherever you'd like, create a folder to clone our project into. Open windows ter
   
 ## Installing dependencies
 
-For our application to run we need to install packages and modules that our app depends on, inside our project's folder (where it contains all it's files), it's strictly necessary to run 'npm i' command in terminal.
+For our application to run we need to install packages and modules that our app depends on, inside our project's folder (where it contains all it's files), it's strictly necessary to run `npm i` command in terminal.
 
 ## Development server
 
