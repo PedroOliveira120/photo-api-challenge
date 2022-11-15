@@ -19,7 +19,6 @@ export class ImagePageComponent implements OnInit {
       this.unsplash.getPhotograph(imageId).subscribe(
         (res:any) => {
           this.imageData=res;
-          console.log(this.imageData);
         }
       )
     }

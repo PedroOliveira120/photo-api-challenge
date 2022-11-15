@@ -20,7 +20,6 @@ export class RandomImageComponent implements OnInit {
     this.unsplash.getRandomPhotograph().subscribe(
       (res: Object) => {
         this.data=res;
-        console.log(this.data);
       }
     );
   }
